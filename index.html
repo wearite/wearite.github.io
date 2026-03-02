@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="wearite<3">
+    <title>wearite<3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <section class="bio">
+        <div class="container">
+            <div class="bio-card framed">
+                <div class="profile-header left-align">
+                    <div class="avatar">
+                        <img src="avatar.jpg" alt="Ава" loading="lazy" />
+                    </div>
+                    <h1 class="nickname">/wearite</h1>
+                </div>
+                <h2>developer enthusiast (★≧▽^))★☆</h2>
+                <dl>
+                    <dt><strong>/name</strong></dt><dd>Nikolay</dd>
+                    <dt><strong>/nickname</strong></dt><dd>wearite</dd>
+                    <dt><strong>/age</strong></dt><dd>18 y.o.</dd>
+                    <dt><strong>/location</strong></dt><dd>Saint-Petersburg, Russia</dd>
+                    <dt><strong>/telegram</strong></dt>
+                    <dd><a href="https://t.me/wearite">@wearite (тык)</a></dd>
+                    <dt><strong>/xtwitter</strong></dt>
+                    <dd><a href="https://x.com/wearitez">@wearitez (тык)</a></dd>
+<dt>/donate <span>trc20</span></dt>
+<dd class="wallet-container">
+    <span id="wallet-address" class="wallet-field">TRC9MKvpnozisqUguK777J5rYfCZxiWNKM</span>
+    <button class="copy-btn" onclick="copyWallet()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+</dd>
+
+<script>
+function copyWallet() {
+    const text = document.getElementById('wallet-address').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.style.color = '#7cfc00'; // Короткая вспышка зеленым при успехе
+        setTimeout(() => btn.style.color = '', 1000);
+    });
+}
+</script>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>made with <3 by me © wearite</p>
+        </div>
+    </footer>
+</body>
+</html>

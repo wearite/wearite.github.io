@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Уходим от чистого черного к глубокому серому */
+    background-color: #0d1117; 
+    color: #c9d1d9;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.bio-card {
+    /* Эффект приподнятой карточки за счет разницы цветов */
+    background: linear-gradient(145deg, #161b22, #0d1117);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid #30363d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header.left-align {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.profile-header.left-align .avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px; /* Софт-квадрат вместо круга для современности */
+    border: 1px solid #484f58;
+    object-fit: cover;
+}
+
+.profile-header.left-align .nickname {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #b392f0; /* Более мягкий фиолетовый */
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #8b949e;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 0;
+}
+
+dl dt {
+    font-weight: 500;
+    color: #b392f0;
+    font-size: 0.9em;
+    text-transform: lowercase;
+    opacity: 0.9;
+}
+
+dl dd {
+    color: #ecf2f8;
+    font-size: 0.95em;
+}
+
+/* Стилизация ссылок */
+.bio-card a {
+    color: #ecf2f8;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(179, 146, 240, 0.3);
+}
+
+.bio-card a:hover {
+    color: #b392f0;
+    border-bottom-color: #b392f0;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #484f58;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+/* --- НОВЫЕ СТИЛИ ДЛЯ ДОНАТА --- */
+
+.crypto-network {
+    opacity: 0.5; /* Делаем 'trc20' менее ярким */
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
+.wallet-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wallet-field {
+    font-family: monospace;
+    background: rgba(48, 54, 61, 0.2);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    color: #ecf2f8;
+    border: 1px solid #30363d;
+    word-break: break-all; /* Чтобы адрес не вылезал за границы на мобильных */
+}
+
+.copy-btn {
+    background: transparent;
+    border: 1px solid #30363d;
+    color: #8b949e;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Чтобы кнопка не сжималась */
+}
+
+.copy-btn:hover {
+    background: #30363d;
+    color: #b392f0;
+    border-color: #b392f0;
+}
+
+.copy-btn:active {
+    transform: scale(0.9);
+}
